@@ -12,7 +12,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_0favri9" label="Certificado laboral" biodi:width="150" camunda:inputVariable="certificadoLaboral">
+      <input id="InputClause_0favri9" label="Certificado laboral" biodi:width="150" camunda:inputVariable="validacionCertificadoLaboral">
         <inputExpression id="LiteralExpression_1ppu10n" typeRef="string">
           <text></text>
         </inputExpression>
@@ -22,7 +22,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_1ecegmc" label="Declaracion de impuestos" biodi:width="150" camunda:inputVariable="declaracionImpuestos">
+      <input id="InputClause_1ecegmc" label="Declaracion de impuestos" biodi:width="150" camunda:inputVariable="validacionDeclaracionImpuestos">
         <inputExpression id="LiteralExpression_01p1wb0" typeRef="string">
           <text></text>
         </inputExpression>
@@ -32,12 +32,12 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_0j6e2u9" label="Comprobante pago pensión" biodi:width="150" camunda:inputVariable="comprobantePagoPension">
+      <input id="InputClause_0j6e2u9" label="Comprobante pago pensión" biodi:width="150" camunda:inputVariable="validacionComprobantePagoPension">
         <inputExpression id="LiteralExpression_0y6qqbr" typeRef="string">
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_1sohklh" label="Historial crediticio" biodi:width="150" camunda:inputVariable="historialCrediticio">
+      <input id="InputClause_1sohklh" label="Historial crediticio" biodi:width="150" camunda:inputVariable="validacionHistorialCrediticio">
         <inputExpression id="LiteralExpression_146dg05" typeRef="string">
           <text></text>
         </inputExpression>
@@ -48,22 +48,22 @@
           <text>&lt;22</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0rszeej">
-          <text>false</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xuz55c">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1e8z5i6">
-          <text>false</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_159tth1">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0o4ijlu">
-          <text>false</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gc6i8h">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0by1ui9">
           <text>any([true])</text>
@@ -130,6 +130,35 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_155itaa">
+        <inputEntry id="UnaryTests_0uyjjxf">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n3ys2h">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15kgqm8">
+          <text>"Vencido"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hweipv">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dmzwwu">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15lndva">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d27wlg">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ltjvog">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q9zxb3">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1a09070">
         <inputEntry id="UnaryTests_1ylgbu7">
           <text>22-75</text>
@@ -188,6 +217,35 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_088sl8h">
+        <inputEntry id="UnaryTests_0qno6tq">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u5wxnx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16fxtco">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e613qw">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02xqc4i">
+          <text>"Vencido"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hn48yj">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ilg6lo">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w1a2zr">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18m1pfe">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1vh74zh">
         <inputEntry id="UnaryTests_0sut2pg">
           <text>&gt;75</text>
@@ -243,6 +301,35 @@
           <text>"Medio","Bajo"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0sln24u">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hok73r">
+        <inputEntry id="UnaryTests_1ynexpw">
+          <text>&gt;75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yl2myv">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s3rosc">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b29u1r">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m4xhzz">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s5w68s">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0paj73g">
+          <text>"Vencido"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oftu54">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ri0xo7">
           <text>false</text>
         </outputEntry>
       </rule>

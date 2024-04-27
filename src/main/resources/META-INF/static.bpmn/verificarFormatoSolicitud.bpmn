@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_02sipti" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.20.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
-  <bpmn:collaboration id="verificarFormatoSolicitud">
-    <bpmn:participant id="Participant_1ret8ob" name="Banco" processRef="Process_0zxr19z" />
+  <bpmn:collaboration id="Collaboration_1sxeyi2">
+    <bpmn:participant id="Participant_1ret8ob" name="Banco" processRef="verificarFormatoSolicitud" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_0zxr19z" isExecutable="true" camunda:historyTimeToLive="180">
+  <bpmn:process id="verificarFormatoSolicitud" name="Verificar Formato de Solicitud" isExecutable="true" camunda:historyTimeToLive="1">
     <bpmn:laneSet id="LaneSet_1x341p7">
       <bpmn:lane id="Lane_0ef6rq8" name="Agente de créditos">
         <bpmn:flowNodeRef>Activity_1qcik2r</bpmn:flowNodeRef>
@@ -51,7 +51,11 @@
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="comprobantePagoPension" type="string" defaultValue="${comprobantePagoPension}" />
-          <camunda:formField id="validacionComprobantePagoPension" type="boolean" />
+          <camunda:formField id="validacionComprobantePagoPension" label="Estado del comprobante pago" type="enum">
+            <camunda:value id="NoAplica" name="No Aplica" />
+            <camunda:value id="Reciente" name="Reciente" />
+            <camunda:value id="Vencido" name="Vencido" />
+          </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_020sjg8</bpmn:incoming>
@@ -75,7 +79,11 @@
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="declaracionImpuestos" type="string" defaultValue="${declaracionImpuestos}" />
-          <camunda:formField id="validacionDeclaracionImpuestos" type="enum" />
+          <camunda:formField id="validacionDeclaracionImpuestos" label="Estado de la declaración de impuestos" type="enum">
+            <camunda:value id="NoAplica" name="No Aplica" />
+            <camunda:value id="Reciente" name="Reciente" />
+            <camunda:value id="Vencido" name="Vencido" />
+          </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0yhlkh1</bpmn:incoming>
@@ -97,7 +105,11 @@
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="certificadoLaboral" type="string" defaultValue="${certificadoLaboral}" />
-          <camunda:formField id="validacionCertificadoLaboral" label="Certificado laboral valido?" type="boolean" />
+          <camunda:formField id="validacionCertificadoLaboral" label="Estado del certificado laboral" type="enum">
+            <camunda:value id="NoAplica" name="No Aplica" />
+            <camunda:value id="Reciente" name="Reciente" />
+            <camunda:value id="Vencido" name="Vencido" />
+          </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0tbzway</bpmn:incoming>
@@ -107,8 +119,10 @@
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="historialCrediticio" type="string" defaultValue="${historialCrediticio}" />
-          <camunda:formField id="validacionHistorialCrediticio" type="enum">
-            <camunda:properties />
+          <camunda:formField id="validacionHistorialCrediticio" label="Nivel del historial crediticio" type="enum">
+            <camunda:value id="Bajo" name="Bajo" />
+            <camunda:value id="Medio" name="Medio" />
+            <camunda:value id="Alto" name="Alto" />
           </camunda:formField>
         </camunda:formData>
       </bpmn:extensionElements>
@@ -123,17 +137,17 @@
     </bpmn:parallelGateway>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="verificarFormatoSolicitud">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1sxeyi2">
       <bpmndi:BPMNShape id="Participant_1ret8ob_di" bpmnElement="Participant_1ret8ob" isHorizontal="true">
         <dc:Bounds x="160" y="80" width="800" height="510" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0ef6rq8_di" bpmnElement="Lane_0ef6rq8" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="770" height="400" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_19ftjgj_di" bpmnElement="Lane_19ftjgj" isHorizontal="true">
         <dc:Bounds x="190" y="480" width="770" height="110" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0ef6rq8_di" bpmnElement="Lane_0ef6rq8" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="770" height="400" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1qxszci_di" bpmnElement="Activity_1qcik2r">

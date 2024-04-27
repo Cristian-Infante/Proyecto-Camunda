@@ -18,7 +18,8 @@
         "columns": null
       },
       "id": "Field_0atbjxg",
-      "key": "esEmpleado"
+      "key": "esEmpleado",
+      "properties": {}
     },
     {
       "label": "Es independiente",
@@ -56,7 +57,7 @@
       "readonly": false
     },
     {
-      "label": "Historial crediticio",
+      "label": "Puntaje de Historial crediticio",
       "type": "textfield",
       "layout": {
         "row": "Row_0nfnk20",
