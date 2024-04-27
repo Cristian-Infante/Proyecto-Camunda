@@ -1,0 +1,112 @@
+{
+  "components": [
+    {
+      "text": "# Documento solicitud",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_10ur86w",
+        "columns": null
+      },
+      "id": "Field_0z7s3oc"
+    },
+    {
+      "label": "Es empleado",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0djpcp0",
+        "columns": null
+      },
+      "id": "Field_0atbjxg",
+      "key": "esEmpleado"
+    },
+    {
+      "label": "Es independiente",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0djpcp0",
+        "columns": null
+      },
+      "id": "Field_11bsedc",
+      "key": "esIndependiente",
+      "readonly": true,
+      "disabled": false
+    },
+    {
+      "label": "Es pensionado",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0djpcp0",
+        "columns": null
+      },
+      "id": "Field_1x4lyfd",
+      "key": "esPensionado",
+      "readonly": true,
+      "defaultValue": false
+    },
+    {
+      "label": "Documento RUT",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0nfnk20",
+        "columns": null
+      },
+      "id": "Field_0exa9vc",
+      "key": "RUT",
+      "readonly": false
+    },
+    {
+      "label": "Historial crediticio",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0nfnk20",
+        "columns": null
+      },
+      "id": "Field_0m0u9mx",
+      "key": "historialCrediticio",
+      "readonly": false
+    },
+    {
+      "label": "Certificado laboral (si aplica)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b5328r",
+        "columns": null
+      },
+      "id": "Field_1k6zs99",
+      "key": "certificadoLaboral",
+      "readonly": false
+    },
+    {
+      "label": "Declaración de impuestos (si aplica)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_14qenwp",
+        "columns": null
+      },
+      "id": "Field_0r2qh6y",
+      "key": "declaracionImpuestos",
+      "readonly": false
+    },
+    {
+      "label": "Comprobantes de pago de pensión (si aplica)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1b6tlzy",
+        "columns": null
+      },
+      "id": "Field_1ono2xv",
+      "key": "comprobantePagoPension",
+      "readonly": false
+    }
+  ],
+  "type": "default",
+  "id": "documentoSolucitud",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}

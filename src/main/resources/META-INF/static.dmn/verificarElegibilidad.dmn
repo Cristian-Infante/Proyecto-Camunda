@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="verificarElegi" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+  <decision id="verificarElegibilidad" name="Verificación de la elegibilidad" camunda:historyTimeToLive="0">
+    <decisionTable id="DecisionTable_14gkzs5" biodi:annotationsWidth="400">
+      <input id="Input_1" label="Edad" biodi:width="150" camunda:inputVariable="edadSolicitante">
+        <inputExpression id="InputExpression_1" typeRef="long">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07mzrj7" label="Es empleado?" biodi:width="150" camunda:inputVariable="esEmpleado">
+        <inputExpression id="LiteralExpression_0g88f5a" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0favri9" label="Certificado laboral" biodi:width="150" camunda:inputVariable="certificadoLaboral">
+        <inputExpression id="LiteralExpression_1ppu10n" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0cyayhc" label="Es independiente?" biodi:width="150" camunda:inputVariable="esIndependiente">
+        <inputExpression id="LiteralExpression_0skna5x" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ecegmc" label="Declaracion de impuestos" biodi:width="150" camunda:inputVariable="declaracionImpuestos">
+        <inputExpression id="LiteralExpression_01p1wb0" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0u3ud14" label="Es pensionado?" biodi:width="150" camunda:inputVariable="esPensionado">
+        <inputExpression id="LiteralExpression_0rmr2q3" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0j6e2u9" label="Comprobante pago pensión" biodi:width="150" camunda:inputVariable="comprobantePagoPension">
+        <inputExpression id="LiteralExpression_0y6qqbr" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1sohklh" label="Historial crediticio" biodi:width="150" camunda:inputVariable="historialCrediticio">
+        <inputExpression id="LiteralExpression_146dg05" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Validacion" name="Validacion" typeRef="boolean" biodi:width="150" />
+      <rule id="DecisionRule_1q1uxd3">
+        <inputEntry id="UnaryTests_12bkgzi">
+          <text>&lt;22</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rszeej">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xuz55c">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e8z5i6">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_159tth1">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o4ijlu">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gc6i8h">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0by1ui9">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ampiw1">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1knfe76">
+        <inputEntry id="UnaryTests_02k6abm">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aj1gm5">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zslxgo">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05tsxnw">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fdqlj9">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m0wr8t">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tpo7us">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00strm2">
+          <text>"Alto","Medio"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_016h76p">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x286p4">
+        <inputEntry id="UnaryTests_04cydh9">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c35l1a">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0axcb6c">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02i6xrh">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fihw8p">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ivmine">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wtvz4f">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0khr01f">
+          <text>"Bajo"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wtjext">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1a09070">
+        <inputEntry id="UnaryTests_1ylgbu7">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xi1eaj">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zwj4pj">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ooo8og">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ybjqib">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r06cah">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10t8jk5">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k92v08">
+          <text>"Alto","Medio"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xotcjf">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m3g4od">
+        <inputEntry id="UnaryTests_1en02hd">
+          <text>22-75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10kigjk">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rz1ze3">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qilevk">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03p1pek">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vymsa1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xs0s94">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bv73e8">
+          <text>"Bajo"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0p3pysy">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vh74zh">
+        <inputEntry id="UnaryTests_0sut2pg">
+          <text>&gt;75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_047mscs">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0si24lk">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eumv9o">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nrvsh9">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dd7amh">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15e6qsz">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bnozxo">
+          <text>"Alto"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nv83ba">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10o6uub">
+        <inputEntry id="UnaryTests_1qco7p1">
+          <text>&gt;75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o645mq">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q62lvz">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jpb7ur">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n208d0">
+          <text>"No aplica"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03tazgo">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x3buez">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxf4pg">
+          <text>"Medio","Bajo"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sln24u">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="verificarElegibilidad">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
