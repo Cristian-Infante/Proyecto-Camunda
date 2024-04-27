@@ -1,7 +1,7 @@
 # Validación para comprobar si la solicitud de crédito está incompleta
 
 `${(RUT == null) || (historialCrediticio == null) || (esEmpleado == "true" && certificadoLaboral == null) || (esIndependiente == "true" && declaracionImpuestos == null) || (esPensionado == "true" && comprobantePagoPension == null)}`
-`${(RUT == null || RUT.isEmpty()) || (historialCrediticio == null || historialCrediticio.isEmpty()) || (esEmpleado && (certificadoLaboral == null || certificadoLaboral.isEmpty())) || (esIndependiente && (declaracionImpuestos == null || declaracionImpuestos.isEmpty())) || (esPensionado && (comprobantePagoPension == null || comprobantePagoPension.isEmpty()))}`
+
 
 Se verifica si la solicitud de crédito está incompleta si:
 1. El historial crediticio es nulo.
