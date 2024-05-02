@@ -1,34 +1,89 @@
-# Validación para comprobar si la solicitud de crédito está incompleta
+# Solicitud de crédito de un vehículo
 
-`${(RUT == null) || (historialCrediticio == null) || (esEmpleado == "true" && certificadoLaboral == null) || (esIndependiente == "true" && declaracionImpuestos == null) || (esPensionado == "true" && comprobantePagoPension == null)}`
+## Descripción
+
+Este proyecto implementa un motor de workflow con Camunda, automatizando el proceso de solicitud de crédito para vehículo en Colombia. El proceso inicia cuando un solicitante, mayor de edad y con capacidad legal, decide adquirir un vehículo mediante financiación. El sistema gestiona la recopilación de documentos necesarios, evalúa el historial crediticio y la capacidad de pago del solicitante, y determina la aprobación del crédito y sus condiciones. Este proceso asegura la transparencia y seguridad en la transacción, incluyendo la firma del contrato y, si es necesario, la constitución de una prenda sobre el vehículo.
+
+---
+
+## Prerrequisitos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- **Java JDK 20**
+    - Para verificar la versión de Java, se debe ejecutar `java -version` en la terminal. Si es necesario instalar Java, se puede visitar la página oficial de [Oracle](https://www.oracle.com/java/technologies/javase-jdk20-downloads.html) para descargar e instalar el JDK.
+- **Maven 3.6 o superior**
+    - Para comprobar si Maven está instalado, se debe ejecutar `mvn -v` en la terminal. Si es necesario instalar Maven, se debe seguir las instrucciones en la [página oficial de Maven](https://maven.apache.org/install.html).
+- **Git**
+    - Para clonar el repositorio, es necesario tener Git instalado. Para verificarlo, se puede ejecutar  `git --version`. Si es necesario instalar Git, se pueden seguir las instrucciones en la [Git's website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+---
+
+## Configuración Inicial
+
+### Clonar el Repositorio
+
+Para obtener una copia del repositorio Git mediante comandos, seguir estos pasos:
+
+```bash
+git clone https://github.com/Cristian-Infante/Proyecto-Camunda.git
+cd Proyecto-Camunda
+```
+
+En caso de que se prefiera descargar el repositorio como un archivo `.zip`, se puede hacer clic en el botón azul "Code" en la página del repositorio y seleccionar "Download ZIP". Luego, descomprimir el archivo descargado y acceder al directorio del proyecto.
+```bash
+cd Proyecto-Camunda-CFIC
+```
 
 
-Se verifica si la solicitud de crédito está incompleta si:
-1. El historial crediticio es nulo.
-2. El RUT es nulo.
-3. Es empleado y no proporciona un certificado laboral.
-4. Es independiente y no proporciona una declaración de impuestos.
-5. Es pensionado y no proporciona un comprobante de pago de pensión.
+### Instalar Dependencias y Construir el Proyecto
 
+Una vez obtenido el código fuente, y estando en el directorio del proyecto y ejecutar:
 
-# Tabla de decisión para validación de créditos
+```bash
+mvn clean install
+```
 
-| Regla | Edad  | Es empleado | Certificado laboral | Es independiente | Declaración de impuestos | Es pensionado | Comprobante pago pensión | Historial crediticio | Validación |
-|:-----:|:-----:|:-----------:|:-------------------:|:----------------:|:------------------------:|:-------------:|:------------------------:|:--------------------:|:----------:|
-|   1   |  <22  | any([true]) |     any([true])     |   any([true])    |       any([true])        |  any([true])  |       any([true])        |     any([true])      |   false    |
-|   2   | 22-75 |    true     |     "Reciente"      |      false       |       "No aplica"        |     false     |       "No aplica"        |    "Alto","Medio"    |    true    |
-|   3   | 22-75 |    true     |     "Reciente"      |      false       |       "No aplica"        |     false     |       "No aplica"        |        "Bajo"        |   false    |
-|   4   | 22-75 |    true     |      "Vencido"      |      false       |       "No aplica"        |     false     |       "No aplica"        |     any([true])      |   false    |
-|   5   | 22-75 |    false    |     "No aplica"     |       true       |       "Presentada"       |     false     |       "No aplica"        |    "Alto","Medio"    |    true    |
-|   6   | 22-75 |    false    |     "No aplica"     |       true       |       "Presentada"       |     false     |       "No aplica"        |        "Bajo"        |   false    |
-|   7   | 22-75 |    false    |     "No aplica"     |       true       |        "Vencido"         |     false     |       "No aplica"        |     any([true])      |   false    |
-|   8   |  >75  |    false    |     "No aplica"     |      false       |       "No aplica"        |     true      |        "Reciente"        |        "Alto"        |    true    |
-|   9   |  >75  |    false    |     "No aplica"     |      false       |       "No aplica"        |     true      |        "Reciente"        |    "Medio","Bajo"    |   false    |
-|  10   |  >75  |    false    |     "No aplica"     |      false       |       "No aplica"        |     true      |        "Vencido"         |     any([true])      |   false    |
+Este comando realiza lo siguiente:
+- **mvn clean**: Elimina la carpeta `target`, asegurando que no haya residuos de construcciones anteriores.
+- **mvn install**: Descarga todas las dependencias necesarias y compila el proyecto, creando el archivo `.jar` necesario para ejecutar la aplicación.
 
-En esta tabla de reglas se asumen:
-1. La edad del solicitante es un factor importante en la decisión de validar o no la solicitud de crédito. No se consideran solicitudes de menores de 22 años.
-2. Los empleados deben proporcionar un certificado laboral Reciente para verificar su estabilidad laboral, y su historial crediticio debe ser medio o alto para ser considerados para la validación. En caso de que el certificado laboral esté vencido, la solicitud no será validada.
-3. Los independientes deben presentar una declaración de impuestos reciente para ser considerados para la validación. Su historial crediticio debe ser medio o alto para ser considerados para la validación. En caso de que la declaración de impuestos esté vencida, la solicitud no será validada.
-4. Los pensionados deben presentar un comprobante de pago de pensión reciente para ser considerados para la validación. Su historial crediticio debe ser alto para ser considerados para la validación. En caso de que el comprobante de pago de pensión esté vencido, la solicitud no será validada.
+---
 
+## Ejecución del Proyecto
+
+Para iniciar el proyecto, se debe ejecutar el siguiente comando en el directorio raíz del proyecto:
+
+```bash
+java -jar target/Proyecto-1.0.0-SNAPSHOT.jar
+```
+
+---
+
+## Verificación de la Instalación
+
+Para asegurar que el proyecto se está ejecutando correctamente, se debe acceder al dashboard de Camunda y realizar una prueba simple:
+
+### Acceso al Dashboard de Camunda
+
+El dashboard de Camunda se puede acceder a través de:
+
+```
+http://localhost:8080/camunda/app/welcome/default/#!/login
+```
+
+Utilizar las siguientes credenciales predeterminadas para iniciar sesión:
+
+- **Username:** `demo`
+- **Password:** `demo`
+
+### Realizar una Prueba Simple
+
+Explica cómo lanzar y verificar un proceso simple, como iniciar un proceso de ejemplo que viene con el proyecto, detallando los pasos para realizar esta tarea desde el dashboard o utilizando una API REST si tu proyecto lo soporta.
+
+---
+
+## Documentación y Recursos Adicionales
+
+- [Documentación de Camunda BPM](https://docs.camunda.org)
+- [Documentación de Spring Boot](https://spring.io/projects/spring-boot)

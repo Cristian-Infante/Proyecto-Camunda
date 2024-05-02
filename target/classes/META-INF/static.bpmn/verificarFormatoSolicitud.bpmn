@@ -27,7 +27,7 @@
     <bpmn:sequenceFlow id="Flow_0a5n0bl" sourceRef="Gateway_10c7yhx" targetRef="Activity_11zsdtm" />
     <bpmn:sequenceFlow id="Flow_1blcu2z" sourceRef="Activity_1qcik2r" targetRef="Gateway_0s9n5wr" />
     <bpmn:sequenceFlow id="Flow_020sjg8" name="Es pensionado?" sourceRef="Gateway_06czx15" targetRef="Activity_1sk4tqe">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">{esPensionado== true}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esPensionado== true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0yhlkh1" sourceRef="Gateway_06czx15" targetRef="Activity_0htssno">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${esIndependiente==true}</bpmn:conditionExpression>
@@ -68,7 +68,7 @@
       <bpmn:outgoing>Flow_1f8guyr</bpmn:outgoing>
       <bpmn:outgoing>Flow_0a5n0bl</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:startEvent id="StartEvent_1" name="Formato solicitud recibido" camunda:formRef="documentoSolucitud" camunda:formRefBinding="latest">
+    <bpmn:startEvent id="StartEvent_1" name="Formato solicitud recibido" camunda:formRef="documentoSolicitud" camunda:formRefBinding="latest">
       <bpmn:outgoing>Flow_1dpnezi</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="Event_1h92jsr" name="Formato solicitud revisado">

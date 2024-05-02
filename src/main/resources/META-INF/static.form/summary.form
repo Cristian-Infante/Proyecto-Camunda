@@ -1,0 +1,27 @@
+{
+  "components": [
+    {
+      "label": "Resumen",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0pd08c3",
+        "columns": null
+      },
+      "id": "Field_1jme3h3",
+      "key": "summary",
+      "defaultValue": "Rechazada",
+      "properties": {},
+      "disabled": true,
+      "readonly": true
+    }
+  ],
+  "type": "default",
+  "id": "reject_summary",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}

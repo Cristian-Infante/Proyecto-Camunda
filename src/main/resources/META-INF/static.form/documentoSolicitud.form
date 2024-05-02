@@ -30,7 +30,7 @@
       },
       "id": "Field_11bsedc",
       "key": "esIndependiente",
-      "readonly": true,
+      "readonly": false,
       "disabled": false
     },
     {
@@ -42,7 +42,7 @@
       },
       "id": "Field_1x4lyfd",
       "key": "esPensionado",
-      "readonly": true,
+      "readonly": false,
       "defaultValue": false
     },
     {
@@ -102,7 +102,7 @@
     }
   ],
   "type": "default",
-  "id": "documentoSolucitud",
+  "id": "documentoSolicitud",
   "exporter": {
     "name": "Camunda Modeler",
     "version": "5.20.0"

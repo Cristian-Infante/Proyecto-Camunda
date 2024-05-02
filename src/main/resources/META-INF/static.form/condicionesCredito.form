@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "text": "# Condiciones crédito",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0pt2y1r",
+        "columns": null
+      },
+      "id": "Field_05pjnlg"
+    },
+    {
+      "label": "Número de cuotas",
+      "type": "number",
+      "layout": {
+        "row": "Row_10y5s1w",
+        "columns": null
+      },
+      "id": "Field_0k2qsm2",
+      "key": "numeroCuotas",
+      "readonly": true,
+      "disabled": true
+    },
+    {
+      "label": "Porcentaje de interés (%)",
+      "type": "number",
+      "layout": {
+        "row": "Row_000kgn7",
+        "columns": null
+      },
+      "id": "Field_1sem3yd",
+      "key": "porcentajeInteres",
+      "readonly": true,
+      "disabled": true
+    }
+  ],
+  "type": "default",
+  "id": "condicionesCredito",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.20.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.20.0",
+  "schemaVersion": 15
+}
