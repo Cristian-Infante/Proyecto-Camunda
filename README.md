@@ -11,13 +11,13 @@ Este proyecto implementa un motor de workflow con Camunda, automatizando el proc
 Antes de comenzar, asegúrate de tener instalado:
 
 - **Java JDK 20**
-    - Para verificar la versión de Java, se debe ejecutar `java -version` en la terminal. Si es necesario instalar Java, se puede visitar la [página oficial de Oracle](https://www.oracle.com/java/technologies/javase-jdk20-downloads.html) para descargar e instalar el JDK.
+  - Para verificar la versión de Java, se debe ejecutar `java -version` en la terminal. Si es necesario instalar Java, se puede visitar la [página oficial de Oracle](https://www.oracle.com/java/technologies/javase-jdk20-downloads.html) para descargar e instalar el JDK.
 - **Maven 3.6 o superior**
-    - Para comprobar si Maven está instalado, se debe ejecutar `mvn -v` en la terminal. Si es necesario instalar Maven, se debe seguir las instrucciones en la [página oficial de Maven](https://maven.apache.org/install.html).
+  - Para comprobar si Maven está instalado, se debe ejecutar `mvn -v` en la terminal. Si es necesario instalar Maven, se debe seguir las instrucciones en la [página oficial de Maven](https://maven.apache.org/install.html).
 - **Git**
-    - Para clonar el repositorio, es necesario tener Git instalado. Para verificarlo, se puede ejecutar  `git --version`. Si es necesario instalar Git, se pueden seguir las instrucciones en la [página oficial de Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-  - **Node.js**
-    - Para verificar si Node.js está instalado, se debe ejecutar `node -v` en la terminal. Si es necesario instalar Node.js, se puede visitar la [página oficial de Node.js](https://nodejs.org/es/download/) para descargar e instalar la versión LTS.
+  - Para clonar el repositorio, es necesario tener Git instalado. Para verificarlo, se puede ejecutar  `git --version`. Si es necesario instalar Git, se pueden seguir las instrucciones en la [página oficial de Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- **Node.js**
+  - Para verificar si Node.js está instalado, se debe ejecutar `node -v` en la terminal. Si es necesario instalar Node.js, se puede visitar la [página oficial de Node.js](https://nodejs.org/es/download/) para descargar e instalar la versión LTS.
 
 ---
 
@@ -66,9 +66,18 @@ java -jar target/Proyecto-1.0.0-SNAPSHOT.jar
 
 Para iniciar el worker encargado del envío de mensajes, se deben ejecutar los siguientes comandos:
 
-1. Entrar a la carpeta `worker` dentro del proyecto: `cd worker`
-2. Ejecutar el comando: `npm i`
-3. Ejecutar el comando: `node .\sendStatus.js`
+1. Entrar a la carpeta `worker` dentro del proyecto:
+   ```bash
+    cd worker
+   ```
+2. Ejecutar el comando:
+   ```bash
+    npm i
+   ```
+3. Ejecutar el comando:
+   ```bash
+    node .\sendStatus.js
+   ```
 
 ## Verificación de la Instalación
 
@@ -76,11 +85,7 @@ Para asegurar que el proyecto se está ejecutando correctamente, se debe acceder
 
 ### Acceso al Dashboard de Camunda
 
-El dashboard de Camunda se puede acceder a través de:
-
-```
-http://localhost:8082/camunda/app/welcome/default/#!/login
-```
+El dashboard de Camunda se puede acceder a través de: [http://localhost:8082/camunda/app/welcome/default/#!/login](http://localhost:8082/camunda/app/welcome/default/#!/login)
 
 Utilizar las siguientes credenciales predeterminadas para iniciar sesión:
 

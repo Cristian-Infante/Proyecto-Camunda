@@ -47,11 +47,11 @@
       <bpmn:outgoing>Flow_1blcu2z</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_1j6b4lv" sourceRef="Activity_1sk4tqe" targetRef="Gateway_088qwe4" />
-    <bpmn:userTask id="Activity_1sk4tqe" name="Revisar comprobantes de pago de pensión">
+    <bpmn:userTask id="Activity_1sk4tqe" name="Verificar comprobantes de pago de pensión">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="comprobantePagoPension" type="string" defaultValue="${comprobantePagoPension}" />
-          <camunda:formField id="validacionComprobantePagoPension" label="Estado del comprobante pago" type="enum">
+          <camunda:formField id="validacionComprobantePagoPension" label="Estado del comprobante pago" type="enum" defaultValue="NoAplica">
             <camunda:value id="NoAplica" name="No Aplica" />
             <camunda:value id="Reciente" name="Reciente" />
             <camunda:value id="Vencido" name="Vencido" />
@@ -75,11 +75,11 @@
       <bpmn:incoming>Flow_1du1zqk</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0fywyaq" sourceRef="Activity_1dhn4hv" targetRef="Gateway_088qwe4" />
-    <bpmn:userTask id="Activity_0htssno" name="Revisar declaración de impuestos">
+    <bpmn:userTask id="Activity_0htssno" name="Verificar declaración de impuestos">
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="declaracionImpuestos" type="string" defaultValue="${declaracionImpuestos}" />
-          <camunda:formField id="validacionDeclaracionImpuestos" label="Estado de la declaración de impuestos" type="enum">
+          <camunda:formField id="validacionDeclaracionImpuestos" label="Estado de la declaración de impuestos" type="enum" defaultValue="NoAplica">
             <camunda:value id="NoAplica" name="No Aplica" />
             <camunda:value id="Reciente" name="Reciente" />
             <camunda:value id="Vencido" name="Vencido" />
@@ -105,7 +105,7 @@
       <bpmn:extensionElements>
         <camunda:formData>
           <camunda:formField id="certificadoLaboral" type="string" defaultValue="${certificadoLaboral}" />
-          <camunda:formField id="validacionCertificadoLaboral" label="Estado del certificado laboral" type="enum">
+          <camunda:formField id="validacionCertificadoLaboral" label="Estado del certificado laboral" type="enum" defaultValue="NoAplica">
             <camunda:value id="NoAplica" name="No Aplica" />
             <camunda:value id="Reciente" name="Reciente" />
             <camunda:value id="Vencido" name="Vencido" />
@@ -187,6 +187,7 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_0chumsv" bpmnElement="Activity_1dhn4hv">
         <dc:Bounds x="560" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1ayth90_di" bpmnElement="Activity_11zsdtm">
         <dc:Bounds x="560" y="494" width="100" height="80" />
