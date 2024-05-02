@@ -11,94 +11,119 @@
       "id": "Field_0z7s3oc"
     },
     {
-      "label": "Es empleado",
-      "type": "checkbox",
+      "components": [
+        {
+          "label": "Es empleado",
+          "type": "checkbox",
+          "layout": {
+            "row": "Row_0c1sf9v",
+            "columns": null
+          },
+          "id": "Field_0atbjxg",
+          "key": "esEmpleado",
+          "properties": {}
+        },
+        {
+          "label": "Es independiente",
+          "type": "checkbox",
+          "layout": {
+            "row": "Row_0c1sf9v",
+            "columns": null
+          },
+          "id": "Field_11bsedc",
+          "key": "esIndependiente",
+          "readonly": false,
+          "disabled": false
+        },
+        {
+          "label": "Es pensionado",
+          "type": "checkbox",
+          "layout": {
+            "row": "Row_0c1sf9v",
+            "columns": null
+          },
+          "id": "Field_1x4lyfd",
+          "key": "esPensionado",
+          "readonly": false,
+          "defaultValue": false
+        }
+      ],
+      "showOutline": true,
+      "label": "Seleccione su estado laboral:",
+      "type": "group",
       "layout": {
-        "row": "Row_0djpcp0",
+        "row": "Row_1nugwzr",
         "columns": null
       },
-      "id": "Field_0atbjxg",
-      "key": "esEmpleado",
-      "properties": {}
+      "id": "Field_0zg87h7",
+      "verticalAlignment": "center"
     },
     {
-      "label": "Es independiente",
-      "type": "checkbox",
-      "layout": {
-        "row": "Row_0djpcp0",
-        "columns": null
-      },
-      "id": "Field_11bsedc",
-      "key": "esIndependiente",
-      "readonly": false,
-      "disabled": false
-    },
-    {
-      "label": "Es pensionado",
-      "type": "checkbox",
-      "layout": {
-        "row": "Row_0djpcp0",
-        "columns": null
-      },
-      "id": "Field_1x4lyfd",
-      "key": "esPensionado",
-      "readonly": false,
-      "defaultValue": false
-    },
-    {
-      "label": "Documento RUT",
-      "type": "textfield",
+      "components": [
+        {
+          "label": "Documento RUT",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1xxynv1",
+            "columns": null
+          },
+          "id": "Field_0exa9vc",
+          "key": "RUT",
+          "readonly": false
+        },
+        {
+          "label": "Puntaje de Historial crediticio",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1xxynv1",
+            "columns": null
+          },
+          "id": "Field_0m0u9mx",
+          "key": "historialCrediticio",
+          "readonly": false
+        },
+        {
+          "label": "Certificado laboral (si aplica)",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0ztufwd",
+            "columns": null
+          },
+          "id": "Field_1k6zs99",
+          "key": "certificadoLaboral",
+          "readonly": false
+        },
+        {
+          "label": "Declaración de impuestos (si aplica)",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_1fcq0nk",
+            "columns": null
+          },
+          "id": "Field_0r2qh6y",
+          "key": "declaracionImpuestos",
+          "readonly": false
+        },
+        {
+          "label": "Comprobantes de pago de pensión (si aplica)",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0ikz4yq",
+            "columns": null
+          },
+          "id": "Field_1ono2xv",
+          "key": "comprobantePagoPension",
+          "readonly": false
+        }
+      ],
+      "showOutline": true,
+      "label": "Llene los campos de acuerdo a la opción seleccionada anteriormente",
+      "type": "group",
       "layout": {
         "row": "Row_0nfnk20",
         "columns": null
       },
-      "id": "Field_0exa9vc",
-      "key": "RUT",
-      "readonly": false
-    },
-    {
-      "label": "Puntaje de Historial crediticio",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_0nfnk20",
-        "columns": null
-      },
-      "id": "Field_0m0u9mx",
-      "key": "historialCrediticio",
-      "readonly": false
-    },
-    {
-      "label": "Certificado laboral (si aplica)",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_0b5328r",
-        "columns": null
-      },
-      "id": "Field_1k6zs99",
-      "key": "certificadoLaboral",
-      "readonly": false
-    },
-    {
-      "label": "Declaración de impuestos (si aplica)",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_14qenwp",
-        "columns": null
-      },
-      "id": "Field_0r2qh6y",
-      "key": "declaracionImpuestos",
-      "readonly": false
-    },
-    {
-      "label": "Comprobantes de pago de pensión (si aplica)",
-      "type": "textfield",
-      "layout": {
-        "row": "Row_1b6tlzy",
-        "columns": null
-      },
-      "id": "Field_1ono2xv",
-      "key": "comprobantePagoPension",
-      "readonly": false
+      "id": "Field_1e3mxfw"
     }
   ],
   "type": "default",

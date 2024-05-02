@@ -42,6 +42,11 @@
           <text></text>
         </inputExpression>
       </input>
+      <input id="InputClause_0uiflp7" label="RUT" biodi:width="150" camunda:inputVariable="validacionRUT">
+        <inputExpression id="LiteralExpression_0g4sa8l" typeRef="boolean">
+          <text></text>
+        </inputExpression>
+      </input>
       <output id="Output_1" label="Validacion" name="Validacion" typeRef="boolean" biodi:width="150" />
       <rule id="DecisionRule_1q1uxd3">
         <inputEntry id="UnaryTests_12bkgzi">
@@ -68,13 +73,16 @@
         <inputEntry id="UnaryTests_0by1ui9">
           <text>any([true])</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_05cz72n">
+          <text>any([true])</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ampiw1">
           <text>false</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1knfe76">
         <inputEntry id="UnaryTests_02k6abm">
-          <text>22-75</text>
+          <text>[22..60]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1aj1gm5">
           <text>true</text>
@@ -86,53 +94,27 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fdqlj9">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m0wr8t">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tpo7us">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00strm2">
           <text>"Alto","Medio"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fo6yop">
+          <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_016h76p">
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0x286p4">
-        <inputEntry id="UnaryTests_04cydh9">
-          <text>22-75</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1c35l1a">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0axcb6c">
-          <text>"Reciente"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02i6xrh">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fihw8p">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ivmine">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wtvz4f">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0khr01f">
-          <text>"Bajo"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0wtjext">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_155itaa">
         <inputEntry id="UnaryTests_0uyjjxf">
-          <text>22-75</text>
+          <text>[22..60]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0n3ys2h">
           <text>true</text>
@@ -144,30 +126,97 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0dmzwwu">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_15lndva">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d27wlg">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ltjvog">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19rfq51">
           <text>any([true])</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1q9zxb3">
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0x286p4">
+        <inputEntry id="UnaryTests_04cydh9">
+          <text>[22..60]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c35l1a">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0axcb6c">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02i6xrh">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fihw8p">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ivmine">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wtvz4f">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0khr01f">
+          <text>"Bajo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03i2mtq">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wtjext">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04u8lnu">
+        <inputEntry id="UnaryTests_16ct6xy">
+          <text>[22..60]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n3zoxn">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gx4xzb">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x2kqie">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nj0zc5">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p7ntm2">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mburx5">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nyecc3">
+          <text>"Alto","Medio"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iv38m9">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tvd9ii">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1a09070">
         <inputEntry id="UnaryTests_1ylgbu7">
-          <text>22-75</text>
+          <text>[22..60]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xi1eaj">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zwj4pj">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ooo8og">
           <text>true</text>
@@ -179,53 +228,27 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_10t8jk5">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0k92v08">
           <text>"Alto","Medio"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pxrnlh">
+          <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xotcjf">
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0m3g4od">
-        <inputEntry id="UnaryTests_1en02hd">
-          <text>22-75</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10kigjk">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rz1ze3">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qilevk">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03p1pek">
-          <text>"Reciente"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vymsa1">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xs0s94">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bv73e8">
-          <text>"Bajo"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0p3pysy">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_088sl8h">
         <inputEntry id="UnaryTests_0qno6tq">
-          <text>22-75</text>
+          <text>[22..60]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u5wxnx">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_16fxtco">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0e613qw">
           <text>true</text>
@@ -237,30 +260,97 @@
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ilg6lo">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w1a2zr">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pd72rz">
           <text>any([true])</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18m1pfe">
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0m3g4od">
+        <inputEntry id="UnaryTests_1en02hd">
+          <text>[22..60]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10kigjk">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rz1ze3">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qilevk">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03p1pek">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vymsa1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xs0s94">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bv73e8">
+          <text>"Bajo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1369uee">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0p3pysy">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04kapwu">
+        <inputEntry id="UnaryTests_1721l4i">
+          <text>[22..60]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q18wos">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sahkwh">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1osi3n0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ase1yq">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09nu74t">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1upujf0">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dwcgnn">
+          <text>"Alto","Medio"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_019tcho">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00kxdey">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1vh74zh">
         <inputEntry id="UnaryTests_0sut2pg">
-          <text>&gt;75</text>
+          <text>[60..75]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_047mscs">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0si24lk">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1eumv9o">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1nrvsh9">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1dd7amh">
           <text>true</text>
@@ -271,54 +361,28 @@
         <inputEntry id="UnaryTests_0bnozxo">
           <text>"Alto"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1oylcpc">
+          <text>true</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0nv83ba">
           <text>true</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_10o6uub">
-        <inputEntry id="UnaryTests_1qco7p1">
-          <text>&gt;75</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1o645mq">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0q62lvz">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jpb7ur">
-          <text>false</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1n208d0">
-          <text>"No aplica"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03tazgo">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0x3buez">
-          <text>"Reciente"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yxf4pg">
-          <text>"Medio","Bajo"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0sln24u">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0hok73r">
         <inputEntry id="UnaryTests_1ynexpw">
-          <text>&gt;75</text>
+          <text>[60..75]</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yl2myv">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s3rosc">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1b29u1r">
           <text>false</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1m4xhzz">
-          <text>"No aplica"</text>
+          <text>any([true])</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s5w68s">
           <text>true</text>
@@ -329,7 +393,106 @@
         <inputEntry id="UnaryTests_1oftu54">
           <text>any([true])</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0c5312w">
+          <text>any([true])</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ri0xo7">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10o6uub">
+        <inputEntry id="UnaryTests_1qco7p1">
+          <text>[60..75]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o645mq">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q62lvz">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jpb7ur">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n208d0">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03tazgo">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x3buez">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxf4pg">
+          <text>"Medio","Bajo"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aej8h8">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sln24u">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0v2o4cv">
+        <inputEntry id="UnaryTests_1oai9up">
+          <text>[60..75]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dscvit">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04ez0q2">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13c68gr">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f0x5ly">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03c3llm">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l0xpye">
+          <text>"Reciente"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r1kbzr">
+          <text>"Alto"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y2dg4z">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bz8a1k">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03psu8t">
+        <inputEntry id="UnaryTests_02y8twp">
+          <text>&gt;75</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19kxj43">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05orkr2">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dscnlg">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pneqxb">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mx28s5">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bh7qs6">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m7k291">
+          <text>any([true])</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v97vu3">
+          <text>any([true])</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0muae5d">
           <text>false</text>
         </outputEntry>
       </rule>
