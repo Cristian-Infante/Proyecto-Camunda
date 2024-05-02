@@ -79,7 +79,8 @@ Utilizar las siguientes credenciales predeterminadas para iniciar sesión:
 
 ### Realizar una Prueba Simple
 
-Explica cómo lanzar y verificar un proceso simple, como iniciar un proceso de ejemplo que viene con el proyecto, detallando los pasos para realizar esta tarea desde el dashboard o utilizando una API REST si tu proyecto lo soporta.
+Entrar al tasklist y crear una nueva tarea de usuario. Para ello, seguir estos pasos:
+1. 
 
 ---
 
